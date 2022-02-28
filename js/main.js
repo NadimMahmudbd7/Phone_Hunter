@@ -1,3 +1,6 @@
+
+// SearchButton----------------------------------------------------------
+
 const SearchBtn = ()=>{
     const inputField = document.getElementById("inputField");
     const inputFieldText = inputField.value;
@@ -6,12 +9,10 @@ const SearchBtn = ()=>{
     .then(res =>res.json())
     .then(data => PhoneList(data.data))
 }
-
 const keyup = document.getElementById("search")
 
 
 const PhoneList =(phones)=>{
-    console.log(phones);
     if(phones.length == 0 ){
         const notfound = document.getElementById("notfound");
         notfound.classList.remove("d-none")
@@ -21,7 +22,6 @@ const PhoneList =(phones)=>{
         notfound.classList.add("d-none")
         const cards = document.getElementById("cards");
     phones.forEach(phone =>{
-        // console.log(phone);
         const card = document.createElement("col")
         card.innerHTML = `
         <div class="card p-3 rounded">
@@ -38,6 +38,10 @@ const PhoneList =(phones)=>{
     }
 }
 
+
+
+// detailsField-----------------------------------------------------------------------------------
+
 const moreDetails = (details)=>{
     const url = `https://openapi.programming-hero.com/api/phone/${details}`
     fetch(url)
@@ -45,19 +49,16 @@ const moreDetails = (details)=>{
     .then(data =>onePhoneDetails(data.data))
 }
 
-// const Sensor = (sensors)=>{
-//     sensors.forEach(sensor=>{
-//         console.log();
-//     })
-// } 
-
 
 const onePhoneDetails = (phonesDetails)=>{
+    // console.log(phonesDetails.others);
+    const otherss = phonesDetails.others;
+    const result = Object.keys(otherss)
+    for(const results of result){
+       const othersFinal=(results,otherss[results]);
+   
     const details = document.getElementById("details")
     details.classList.remove("d-none")
-    phonesDetails.mainFeatures.sensors.forEach(sensor=>{
-        console.log(sensor);
-    console.log(phonesDetails);
     const phoneDetails = document.getElementById("phoneDetails");
     const div = document.createElement("div");
     phoneDetails.innerHTML = ""
@@ -103,7 +104,8 @@ const onePhoneDetails = (phonesDetails)=>{
                               <p class="card-text"><span class = "fw-bold">DisplaySize:</span> ${phonesDetails.mainFeatures.displaySize}</p>
                               <p class="card-text"><span class = "fw-bold">memory:</span> ${phonesDetails.mainFeatures.memory}</p>
                               <p class="card-text"><span class = "fw-bold">Sensors:</span> ${phonesDetails.mainFeatures.sensors}</p>
-                              <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+                              <h5 class="card-title text-center mt-4 py-2 bg-primary text-white rounded">Other's</h5>
+                                <p class="card-text"><span class = "fw-bold"></span> ${otherss[results]}</p>
                             </div>
                           </div>
                         </div>
@@ -111,26 +113,6 @@ const onePhoneDetails = (phonesDetails)=>{
     `
     phoneDetails.appendChild(div)
     }
-    
-    //     div.innerHTML = `
-    // <div class="card mb-3 mx-auto" style="max-width: 540px;">
-    //                     <div class="row g-0">
-    //                       <div class="col-md-4">
-    //                         <img src="${phonesDetails.image}" class="img-fluid rounded-start" alt="...">
-    //                       </div>
-    //                       <div class="col-md-8">
-    //                         <div class="card-body">
-    //                           <h5 class="card-title">Name: ${phonesDetails.name}</h5>
-    //                           <h5 class="card-title">Name: </h5>
-    //                           <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-    //                           <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
-    //                         </div>
-    //                       </div>
-    //                     </div>
-    //                   </div>
-    // `
-    // phoneDetails.appendChild(div)
     }
-})
-
+}
 }
