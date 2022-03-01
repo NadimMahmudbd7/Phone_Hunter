@@ -8,7 +8,10 @@ body{
     background-image: linear-gradient(45deg,rgb(14, 14, 214),rgba(60, 130, 196, 0.726));
 }
 .card{
-    box-shadow: 4px 6px 2px gray;
+    border: 1px solid rgba(255,255,255,0.3);
+    background: rgba(255,255,255,0.2);
+    box-shadow: 0 4px 30px rgba(0,0,0,0.1);
+    backdrop-filter: blue(5px);
 }
 .card:hover{
     transform: scale(1.1);

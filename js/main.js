@@ -45,7 +45,7 @@ const PhoneList =(phones)=>{
         phones.forEach(phone =>{
         const card = document.createElement("col")
         card.innerHTML = `
-        <div class="card p-3 rounded">
+        <div class="card p-3 rounded" style="background: rgba(255,255,255,0.3);">
                     <img src="${phone.image}" class="card-img-top w-50 mx-auto" alt="...">
                     <div class="card-body mx-auto">
                       <h5 class="card-title">Name:${phone.phone_name}</h5>
