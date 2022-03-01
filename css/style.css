@@ -21,7 +21,8 @@ body{
 }
 @media screen and (max-width:688px) {
 #phoneDetails{
-    width: 400px;
+    width: 350px;
+    margin: auto;
 }
 .card:hover{
     transform: scale(1);
