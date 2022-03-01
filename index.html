@@ -38,10 +38,10 @@
         <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
             <div class="carousel-inner">
               <div class="carousel-item active">
-                <img height="500px" src="image2.jpg" class="d-block w-100" alt="...">
+                <img height="400px" src="image2.jpg" class="d-block w-100" alt="...">
               </div>
               <div class="carousel-item ">
-                <img height="500px" src="image.jpg" class="d-block w-100" alt="...">
+                <img height="400px" src="image.jpg" class="d-block w-100" alt="...">
               </div>
             <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="prev">
               <span class="carousel-control-prev-icon" aria-hidden="true"></span>
@@ -65,23 +65,39 @@
                 <input id="inputField" type="text" class="form-control" placeholder="Your Phone name" aria-label="Recipient's username" aria-describedby="button-addon2">
                 <button id="search" class="btn btn-outline-secondary" type="button" id="button-addon2" onclick="SearchBtn()">Search</button>
               </div>
+
+
+              <div class="spineer container text-center d-none" id="spinner">
+                <div class="spinner-border text-primary" role="status">
+                    <span class="visually-hidden">Loading...</span>
+                  </div>
+              </div>
               
               <!-- Not Found -->
-              <div  class="notFoundPhone">
-                <h1 id="notfound" class="text-center text-danger d-none">Your Phone Not found in Our Server</h1>
-            </div>
-
-
-              <!-- Phone Details -->
-            <div class="PhonesDetails">
-                <h1 id="details" class="text-center d-none mb-4">Your Phone Details</h1>
-                <div id="phoneDetails">
+              <div id="totaldetails" class="middleSection">
+                <div  class="notFoundPhone">
+                  <h1 id="notfound" class="text-center text-danger d-none">Your Phone Not found in Our Server</h1>
                 </div>
-            </div>
-
-              <!-- PhoneList -->
-              <div id="cards" class="row row-cols-1 row-cols-md-3 g-4 container mx-auto mt-5">
+  
+  
+                <!-- Phone Details -->
+              <div  class="PhonesDetails">
+                  <h1 id="details" class="text-center d-none mb-5">Your Phone Details</h1>
+                  <div id="phoneDetails">
+                  </div>
               </div>
+  
+                <!-- PhoneList -->
+                <div class="phoneList mb-5">
+                  <div id="cards" class="row row-cols-1 row-cols-md-3 g-4 container mx-auto mt-5">
+                  </div>
+                  <div id="seemore" class="flds d-flex justify-content-end container mt-5 d-none">
+                    <input id="Seemores" style="width: 100px;" class="btn btn-primary" type="submit" value="SeeMore">
+                  </div>
+                </div>
+  
+              </div>
+              
         </section>
     </main>
     
