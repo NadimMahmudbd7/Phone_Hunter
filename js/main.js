@@ -45,7 +45,7 @@ const PhoneList =(phones)=>{
         phones.forEach(phone =>{
         const card = document.createElement("col")
         card.innerHTML = `
-        <div class="card p-3 rounded" style="background: rgba(255,255,255,0.3);">
+        <div class="card p-3 rounded">
                     <img src="${phone.image}" class="card-img-top w-50 mx-auto" alt="...">
                     <div class="card-body mx-auto">
                       <h5 class="card-title">Name:${phone.phone_name}</h5>
@@ -151,7 +151,7 @@ const onePhoneDetails = (phonesDetails)=>{
     
     else{
         div.innerHTML = `
-    <div class="card mb-3 mx-auto" style="max-width: 820px;border-image: linear-gradient(245deg, #ed239f, #1d44e3 100%);border-image-slice:1; border-top-left-radius:84px">
+    <div class="card mb-3 mx-auto " style="max-width: 800px; border-image: linear-gradient(245deg, #ed239f, #1d44e3 100%);border-image-slice:1; border-top-left-radius:84px">
                         <div class="row g-0">
                           <div class="col-md-4">
                             <img style="margin-top: 60%;" src="${phonesDetails.image}" class="img-fluid mx-auto d-block rounded-start" alt="...">
