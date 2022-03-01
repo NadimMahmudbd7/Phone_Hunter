@@ -1,6 +1,5 @@
 
 // SearchButton----------------------------------------------------------
-
 const SearchBtn = ()=>{
     const inputField = document.getElementById("inputField");
     const inputFieldText = inputField.value;
@@ -18,7 +17,7 @@ const SearchBtn = ()=>{
     inputField.value = ""
 }
 
-
+// buttonCall---------------------------------------------------------------------
 const PhoneList =(phones)=>{
 
   const seemore = document.getElementById("seemore");
@@ -104,7 +103,6 @@ const moreDetails = (details)=>{
     .then(res => res.json())
     .then(data =>onePhoneDetails(data.data))
 }
-
 
 const onePhoneDetails = (phonesDetails)=>{
     // console.log(phonesDetails.others);
