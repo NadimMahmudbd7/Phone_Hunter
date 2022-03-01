@@ -21,7 +21,6 @@ const SearchBtn = ()=>{
 const PhoneList =(phones)=>{
 
   const seemore = document.getElementById("seemore");
-  console.log(phones);
   const forTweenty = phones.slice(0,20);
     if(forTweenty.length == 0 ){
         const details = document.getElementById("details")
@@ -98,10 +97,15 @@ const toggleSpinner = (submited)=>{
 // detailsField-----------------------------------------------------------------------------------
 
 const moreDetails = (details)=>{
-    const url = `https://openapi.programming-hero.com/api/phone/${details}`
+  if(details == "apple_iphone_13_mini-11104"){
+    alert("This phone is Stock Out! please choose another Phone")
+  }
+    else{
+      const url = `https://openapi.programming-hero.com/api/phone/${details}`
     fetch(url)
     .then(res => res.json())
     .then(data =>onePhoneDetails(data.data))
+    }
 }
 
 const onePhoneDetails = (phonesDetails)=>{
