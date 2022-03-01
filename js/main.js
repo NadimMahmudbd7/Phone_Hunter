@@ -121,7 +121,7 @@ const onePhoneDetails = (phonesDetails)=>{
             <div class="card mb-3 mx-auto" style="max-width: 820px;border-image: linear-gradient(245deg, #ed239f, #1d44e3 100%);border-image-slice:1; border-top-left-radius:84px">
                         <div class="row g-0">
                           <div class="col-md-4">
-                            <img style="margin-top: 60%;" src="${phonesDetails.image}" class="img-fluid mx-auto d-block rounded-start" alt="...">
+                            <img style="margin-top: 60%", src="${phonesDetails.image}" class="img-fluid w-75 mx-auto d-block rounded-start" alt="...">
                           </div>
                           <div class="col-md-8">
                             <div class="card-body">
@@ -154,7 +154,7 @@ const onePhoneDetails = (phonesDetails)=>{
     <div class="card mb-3 mx-auto " style="max-width: 800px; border-image: linear-gradient(245deg, #ed239f, #1d44e3 100%);border-image-slice:1; border-top-left-radius:84px">
                         <div class="row g-0">
                           <div class="col-md-4">
-                            <img style="margin-top: 60%;" src="${phonesDetails.image}" class="img-fluid mx-auto d-block rounded-start" alt="...">
+                            <img style="margin-top: 60%;" src="${phonesDetails.image}" class="img-fluid w-75 mx-auto d-block rounded-start" alt="...">
                           </div>
                           <div class="col-md-8">
                             <div class="card-body">
